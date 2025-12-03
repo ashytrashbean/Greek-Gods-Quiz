@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Gods Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <input type="checkbox" id="switch" title="toggle light/dark mode">
+    <label for="switch" id="toggle" title="toggle light/dark mode"></label>
+    
+    <form id="quiz-container">
+        <h1>The quiz of the Greek Gods</h1> <br>
+        <img src="/images/header1.PNG" alt="">
+    <section class="quiz">
+        <h2>Olympian Challenge: Test Your Knowledge of Greek Myths!</h2> <br>
+        <p>Welcome, mortal!</p>
+        <p>Before you lies a quiz designed not just to test your knowledge of who's who on Mount Olympus, but to delve into the fun, strange, and fascinating stories of the Greek Gods.</p> <br>
+        <p>Forget the basics!</p>
+        <p>This challenge covers the quirky fun facts, legendary schemes, and epic adventures of the 14 major deities: Zeus, Hera, Poseidon, Hades, and the rest of the Olympian family.</p> <br>
+        <p>Are you ready to prove your mastery of myth and folklore?</p> <br>
+        <p>Good luck,  and may the Fates be ever in your favor!</p>
+    </section>
+    <img src="/images/header2.PNG" alt="">
+
+
+        
+    <div class="quiz">
+        <h2 class="god" id="zeus">Zeus</h2> <br>
+        <h3 class="question">Before marrying Hera, Zeus was famously married to the Titaness Metis, whom he later consumed after learning she was destined to bear a son who would overthrow him.</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="zeus" value="0">True</label> 
+                <p class="feedback">Correct! After receiving a prophecy, Zeus swallowed Metis. Later, he gave birth to Athena himself from his head.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="zeus" value="1">False</label> 
+                <p class="feedback">Incorrect. This event is a famous myth about Zeus ensuring his continued reign.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="poseidon">Poseidon</h2> <br>
+        <h3 class="question">According to one myth, who did Poseidon compete with to become the patron deity of the city of Athens, offering the gift of a saltwater spring or a horse?</h3><br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="poseidon" value="1">Hades</label>
+                <p class="feedback">Incorrect. Hades was not involved in this contest.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="poseidon" value="0">Athena</label>
+                <p class="feedback">Correct! Athena offered the Athenians the <b>olive tree</b>, which they judged superior, choosing her as their patron.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="poseidon" value="1">Apollo</label>
+                <p class="feedback">Incorrect. Apollo was not involved in this contest.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="poseidon" value="1">Hermes</label> 
+                <p class="feedback">Incorrect. Hermes was not involved in this contest.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="hades">Hades</h2> <br>
+        <h3 class="question">Which of the following creatures or guardians are traditionally associated with the realm of Hades and the Underworld? (Select all correct answers)</h3><br>
+        <div class="answers">
+            <div>
+                <label><input type="checkbox" name="hades" value="0"> Cerberus</label>
+                <p class="feedback">Correct! <b>Cerberus</b> is the multi-headed dog guarding the entrance to the Underworld.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hades" value="1"> The Nemean Lion</label> 
+                <p class="feedback">Incorrect. The Nemean Lion was a monstrous creature of the Upper World slain by Heracles.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hades" value="0"> Charon</label> 
+                <p class="feedback">Correct! <b>Charon</b> is the ferryman who transports souls across the rivers Styx and Acheron.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hades" value="0"> The Furies</label> 
+                <p class="feedback">Correct! <b>The Furies</b> are goddesses of vengeance primarily residing in the Underworld.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="hera">Hera</h2> <br>
+        <h3 class="question">Hera's vengeful jealousy against Zeus's many affairs once led her to suspend her husband from the sky with golden chains.</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="hera" value="0">True</label> 
+                <p class="feedback">Correct! This incident occurred after Zeus had an affair and/or after he threw his son Hephaestus off Olympus. The other gods eventually freed Zeus.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hera" value="1">False</label> 
+                <p class="feedback">Incorrect. This incident is a well-known story demonstrating Hera's power and frustration with Zeus.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="demeter">Demeter</h2> <br>
+        <h3 class="question">What gift did Demeter famously give to Triptolemus after he helped her search for Persephone, leading to the spread of agriculture?</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="demeter" value="1"> The secret of fire</label> 
+                <p class="feedback">Incorrect. The secret of fire was given by Prometheus.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="demeter" value="0"> A winged chariot drawn by serpents</label> 
+                <p class="feedback">Correct! Demeter gifted Triptolemus the winged chariot so he could travel the world teaching humanity the art of farming and growing grain.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="demeter" value="1"> An invincible shield</label> 
+                <p class="feedback">Incorrect. An invincible shield is a common mythical item, but not Demeter's gift here.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="demeter" value="1"> A magic, overflowing cornucopia</label> 
+                <p class="feedback">Incorrect. The cornucopia is often associated with the goddess of luck, Tyche, or the Titan Amalthea.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="hestia">Hestia</h2> <br>
+        <h3 class="question">Hestia is unique among the Olympians for choosing a life away from the frequent conflicts and dramas of the other gods. Which of the following facts are associated with her? (Select all correct answers)</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="checkbox" name="hestia" value="0"> She was the firstborn child of Kronos and Rhea.</label> 
+                <p class="feedback">Correct! Hestia was the first to be swallowed by Kronos.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hestia" value="0"> Both Poseidon and Apollo sought her hand in marriage</label> 
+                <p class="feedback">Correct! She took a vow of virginity, rejecting both Poseidon and Apollo.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hestia" value="1"> She was often depicted carrying a spear and wearing a helmet, symbolizing her status as a protector of the home.</label> 
+                <p class="feedback">Incorrect. The description of carrying a spear and wearing a helmet is famously associated with the goddess Athena.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="hestia" value="0"> She gave up her seat on the Olympian council for Dionysos</label> 
+                <p class="feedback">Correct! She voluntarily relinquished her throne to Dionysos to maintain harmony, dedicating herself to the hearth.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="ares">Ares</h2> <br>
+        <h3 class="question">Which of the following major heroes is <strong>not</strong> a child of Ares, despite Ares being the God of War?</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="ares" value="1"> Hippolyta (Queen of the Amazons)</label> 
+                <p class="feedback">Incorrect. Hippolyta is traditionally listed as a direct child of Ares.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="ares" value="1"> Cycnus (A bandit slain by Heracles)</label> 
+                <p class="feedback">Incorrect. Cycnus is traditionally listed as a direct child of Ares.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="ares" value="1"> Ascalaphus (An Argonaut)</label> 
+                <p class="feedback">Incorrect. Ascalaphus is traditionally listed as a direct child of Ares.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="ares" value="0"> Perseus (Slayer of Medusa)</label> 
+                <p class="feedback">Correct! Perseus was the son of <b>Zeus</b> and the mortal woman <b>Danaë</b>.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="athena">Athena</h2> <br>
+        <h3 class="question">Athena was so disgusted by the invention of the flute (which distorted her face when she played it) that she immediately threw it away.</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="athena" value="0">True</label> 
+                <p class="feedback">Correct! Athena threw away the <b>aulos</b> (double flute) after seeing her face puff out while playing it. The satyr Marsyas found it later.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="athena" value="1">False</label> 
+                <p class="feedback">Incorrect. This incident is a true myth illustrating Athena's focus on war and crafts over vanity.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="aphrodite">Aphrodite</h2> <br>
+        <h3 class="question">Aphrodite was born from the sea foam created when the Titan Kronos cast the severed genitals of his father, Uranus, into the sea. Which of the following are alternate origins or stories associated with her birth and arrival? (Select all correct answers)</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="checkbox" name="aphrodite" value="0"> She was a daughter of Zeus and Dione.</label> 
+                <p class="feedback">Correct! The version where she is the daughter of Zeus and Dione (cited in Homer's <b>Iliad</b>) is an alternate lineage.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="aphrodite" value="1"> She arose fully formed from the head of Zeus.</label> 
+                <p class="feedback">Incorrect. Only <b>Athena</b> arose fully formed (and armed) from the head of Zeus.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="aphrodite" value="0"> She first came ashore on the island of Cyprus</label> 
+                <p class="feedback">Correct! She is traditionally said to have first landed on the island of <b>Cyprus</b> after rising from the sea.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="aphrodite" value="0"> Her symbols include the dove, swan, and sparrow.</label> 
+                <p class="feedback">Correct! The <b>dove, swan, and sparrow</b> are her sacred birds and common symbols.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="apollo">Apollo</h2> <br>
+        <h3 class="question">After chasing and failing to win the nymph Daphne, which plant became sacred to Apollo, and whose leaves he perpetually wore on his head?</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="apollo" value="1"> Olive</label> 
+                <p class="feedback">Incorrect. The olive tree belongs to Athena.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="apollo" value="1"> Myrtle</label>
+                <p class="feedback">Incorrect. The myrtle belongs to Aphrodite.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="apollo" value="0"> Laurel</label> 
+                <p class="feedback">Correct! The nymph <b>Daphne</b> was transformed into a <b>laurel tree</b> to escape Apollo's pursuit.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="apollo" value="1"> Cypress</label> 
+                <p class="feedback">Incorrect. The cypress is associated with mourning.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="artemis">Artemis</h2> <br>
+        <h3 class="question">While hunting, Artemis once encountered the hunter Orion, whom she fell deeply in love with and planned to marry, but later killed him by trickery at the behest of her jealous brother, Apollo.</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="artemis" value="0">True</label> 
+                <p class="feedback">Correct! Apollo tricked Artemis into shooting a distant speck in the sea—which was Orion's head—knowing her pride would make her accept the challenge.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="artemis" value="1">False</label> 
+                <p class="feedback">Incorrect. This story is a famous version of Orion's death, orchestrated by Apollo.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="hermes">Hermes</h2> <br>
+        <h3 class="question">On the very first day of his life, baby Hermes proved his cunning by stealing the cattle of which Olympian god, before he was forced to reconcile and exchange gifts?</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="hermes" value="1">Poseidon</label> 
+                <p class="feedback">Incorrect. The cattle theft story does not involve Poseidon.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hermes" value="0">Apollo</label> 
+                <p class="feedback">Correct! Hermes stole <b>Apollo's</b> cattle and later charmed him by trading his newly invented lyre for them.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hermes" value="1">Hephaestus</label> 
+                <p class="feedback">Incorrect. The cattle theft story does not involve Hephaestus.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hermes" value="1">Ares</label> 
+                <p class="feedback">Incorrect. The cattle theft story does not involve Ares.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="dionysos">Dionysos</h2> <br>
+        <h3 class="question">Due to his unusual birth and subsequent madness and wandering, which of the following facts are associated with the life of Dionysos? (Select all correct answers)</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="checkbox" name="dionysos" value="0"> He was the only major Olympian born of a mortal mother (Semele).</label> 
+                <p class="feedback">Correct! His mother, <b>Semele</b>, was mortal, making him unique among the major Olympians.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="dionysos" value="0"> He was sewn into Zeus's thigh and later "re-born" by him.</label> 
+                <p class="feedback">Correct! After Semele's death, Zeus rescued the fetal Dionysos and sewed him into his thigh.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="dionysos" value="1"> He was originally the patron god of the vine and wine in Egypt before his worship was adopted by the Greeks.</label> 
+                <p class="feedback">Incorrect. His worship is considered to have originated in Thrace or Asia Minor before becoming established in Greece.</p>
+            </div>
+            <div>
+                <label><input type="checkbox" name="dionysos" value="0"> He journeyed into the Underworld to rescue his mother from Hades.</label> 
+                <p class="feedback">Correct! Dionysos later descended to the Underworld to bring his mother back to Olympus.</p>
+            </div>
+        </div>
+        <p class="feedback main-feedback"></p>
+    </div>
+
+    <div class="quiz">
+        <h2 class="god" id="hephaestus">Hephaestus</h2> <br>
+        <h3 class="question">Which of the following powerful objects or artifacts is <strong>not</strong> one of the many creations forged by Hephaestus?</h3> <br>
+        <div class="answers">
+            <div>
+                <label><input type="radio" name="hephaestus" value="1"> The winged sandals of Hermes</label> 
+                <p class="feedback">Incorrect. Hephaestus famously designed and forged the winged sandals for Hermes.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hephaestus" value="1"> The bronze, animated giant Talos</label>
+                <p class="feedback">Incorrect. Hephaestus famously forged the automaton Talos to guard the island of Crete.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hephaestus" value="1">The Scepter of Zeus</label> 
+                <p class="feedback">Incorrect. Hephaestus, as the blacksmith of the gods, would naturally forge the primary symbol of Zeus's kingly power.</p>
+            </div>
+            <div>
+                <label><input type="radio" name="hephaestus" value="0"> The Chariot of Helios (Sun God)</label>
+                <p class="feedback">Correct! The Chariot of Helios is generally considered a <b>natural divine object</b> belonging to the Sun God, and is <b>not</b> a famous creation attributed to Hephaestus's forge.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="final-result-container"></div>
+        <section id="final-result-container" class="quiz">
+            <img src="/images/thumbs-up.png" alt="thumbs up" id="excellent" class="result-animation" height="80px" hidden>
+            <img src="/images/thumbs-mid.png" alt="thumbs middle" id="good" class="result-animation"  height="80px" hidden>
+            <img src="/images/thumbs-down.png" alt="thumbs down" id="bad" class="result-animation" height="80px" hidden>
+            <button type="submit" id="submit-quiz">Check answers</button>
+            <p id="grade"></p>
+        </section>
+    </form>
+
+    
+
+</body>
+</html>

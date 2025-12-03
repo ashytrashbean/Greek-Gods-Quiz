@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+
+form{
+    text-align: center;
+    background-color: #D37A29;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+}
+
+.quiz{
+    
+    background-color: #fae8dd;
+    width: 50%;
+    margin: 20px;
+    padding: 30px 10%;
+}
+
+h3{
+    font-weight: normal;
+}
+
+button{
+    border: none;
+    background-color: #D37A29;
+    color: #fae8dd;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin: 8px 20px;
+    font-size: medium;
+}
+
+form label{
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+
+button:hover, label:hover{
+    background-color: #d6bb64;
+    border: 2px solid #D37A29;
+    color: black;
+}
+
+.feedback{
+    display: none;
+}
+
+
+/* -------------------------------------- */
+/* light and dark mode toggler */
+
+body{
+    background-color: #D37A29;
+}
+
+:root{
+    --primary-color: white;
+    --primary-label: black;
+    --secondary-label: white;
+    --white-ball: white;
+    --black-ball: black;
+}
+
+#switch{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+label#toggle{
+    display: flex;
+    justify-self: end;
+    width: 50px;
+    height: 25px;
+    background: var(--secondary-label);
+    border-radius: 100px;
+    position: sticky;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+label#toggle::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 70px;
+    background-color: var(--black-ball);
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    transition: 0.5s;
+}
+
+#switch:checked + label#toggle:after{
+    background-color: var(--white-ball);
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+#switch:checked + label#toggle{
+    background-color: var(--primary-label);
+}
+
+label#toggle:active:after{
+    width: 60px;
+}
+
+/* --------------------- */
+
+
+/* All result animations are hidden by default */
+.result-animation {
+    display: none;
+    /* Optional: Center it */
+    margin: 20px auto; 
+}
+
+/* This class will be added by JavaScript to display the result */
+.result-animation.show {
+    display: block; 
+    /* Initially hide the SVG before the animation starts */
+    opacity: 0; 
+    transform: scale(0);
+    
+    /* Apply the stamp animation */
+    animation: stamp-pop 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+
+@keyframes stamp-pop {
+    /* Start slightly scaled up and invisible */
+    0% {
+        opacity: 0;
+        transform: scale(4.2); 
+    }
+    
+    /* Mid-point: Scale down and fully visible (for a slight bounce effect) */
+    80% {
+        opacity: 1;
+        transform: scale(2.95); /* Overshoot slightly smaller than final size */
+    }
+    
+    /* End: Final resting size */
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* -------------------- */
+
+@media (max-width:590px){
+    .quiz{
+        width: 80%;
+        margin: 20px;
+        padding: 30px 8%;
+    }
+}
