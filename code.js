@@ -17,84 +17,55 @@ toggler.addEventListener('click', ()=>{
     
 })
 
-// själva quizet objekt
-
-let quiz = document.querySelectorAll('.quiz');
-let options = document.querySelectorAll('.answers');
+// The quiz objs
 
 const grade = document.querySelector('#grade');
 
 
+function correctionFeedback(obj){
+    if(obj.value === '0'){
+            obj.parentElement.style.backgroundColor ='green';
+            obj.parentElement.style.color ='white';
 
-let lable = document.querySelectorAll('lable');
+            // Shows the feedback text
+            obj.parentElement.nextElementSibling.style.display = 'block';
+            obj.parentElement.nextElementSibling.style.backgroundColor = 'green';
+            obj.parentElement.nextElementSibling.style.color = 'white';
+
+            score++
+        } 
+        else{
+            obj.parentElement.style.backgroundColor ='red';
+            obj.parentElement.style.color ='white';
+
+            obj.parentElement.nextElementSibling.style.display = 'block';
+            obj.parentElement.nextElementSibling.style.backgroundColor = 'red';
+            obj.parentElement.nextElementSibling.style.color = 'white';
+        }
+}
+
 
 const submitBtn = document.querySelector('#submit-quiz');
 
-
-// utskrivningen av alla svar
+// Grading button that prints the feedback
 submitBtn.addEventListener('click',(event)=>{
     event.preventDefault();
 
     let score = 0;
     const totalScore = 22;
 
+    // Correcting each of the checked elements and showing each questions feedback
+    document.querySelectorAll('[type=radio]:checked').forEach(rad=>{correctionFeedback(rad);});
+    document.querySelectorAll('[type=checkbox]:checked').forEach(check=>{correctionFeedback(check)});
+
+    // Grading animation reset
+    document.querySelectorAll('.result-animation').forEach(element => {element.classList.remove('show')});
+
     
-    let radio = document.querySelectorAll('[type=radio]:checked');
-    let checkbox = document.querySelectorAll('[type=checkbox]:checked');
-
-    radio.forEach(answ=>{
-        if(answ.value === '0'){
-            answ.parentElement.style.backgroundColor ='green';
-            answ.parentElement.style.color ='white';
-
-            // Shows the feedback text
-            answ.parentElement.nextElementSibling.style.display = 'block';
-            answ.parentElement.nextElementSibling.style.backgroundColor = 'green';
-            answ.parentElement.nextElementSibling.style.color = 'white';
-
-            score++
-        } 
-        else{
-            answ.parentElement.style.backgroundColor ='red';
-            answ.parentElement.style.color ='white';
-
-            answ.parentElement.nextElementSibling.style.display = 'block';
-            answ.parentElement.nextElementSibling.style.backgroundColor = 'red';
-            answ.parentElement.nextElementSibling.style.color = 'white';
-        }
-    });
-
-    checkbox.forEach(answ=>{
-        if(answ.value === '0'){
-            answ.parentElement.style.backgroundColor ='green';
-            answ.parentElement.style.color ='white';
-
-            // Shows the feedback text
-            answ.parentElement.nextElementSibling.style.display = 'block';
-            answ.parentElement.nextElementSibling.style.backgroundColor = 'green';
-            answ.parentElement.nextElementSibling.style.color = 'white';
-
-            score++
-        } 
-        else{
-            answ.parentElement.style.backgroundColor ='red';
-            answ.parentElement.style.color ='white';
-
-            answ.parentElement.nextElementSibling.style.display = 'block';
-            answ.parentElement.nextElementSibling.style.backgroundColor = 'red';
-            answ.parentElement.nextElementSibling.style.color = 'white';
-        }
-    });
-
-    document.querySelectorAll('.result-animation').forEach(el => {
-        el.classList.remove('show');
-    });
-
+    // Grading 
     let resultElementId = '';
-
-
-
     let percentage = (score/totalScore) * 100;
+
     if(percentage >= 75){
         grade.innerText = `You scored: ${score}/${totalScore}. You are amazing! Good Job!`;
         grade.style.backgroundColor ='lightgreen';
@@ -109,12 +80,10 @@ submitBtn.addEventListener('click',(event)=>{
         resultElementId= 'bad';
     }
 
-     // --- Display the Chosen Animation ---
+     // Display the Garding Animation
     if (resultElementId) {
         const animationElement = document.getElementById(resultElementId);
-        
         animationElement.classList.add('show');
-
     }
 
 })
