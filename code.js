@@ -23,6 +23,7 @@ const grade = document.querySelector('#grade');
 
 
 function correctionFeedback(obj){
+    let score = 0;
     if(obj.value === '0'){
             obj.parentElement.style.backgroundColor ='green';
             obj.parentElement.style.color ='white';
@@ -51,7 +52,7 @@ const submitBtn = document.querySelector('#submit-quiz');
 submitBtn.addEventListener('click',(event)=>{
     event.preventDefault();
 
-    let score = 0;
+    // let score = 0;
     const totalScore = 22;
 
     // Correcting each of the checked elements and showing each questions feedback
