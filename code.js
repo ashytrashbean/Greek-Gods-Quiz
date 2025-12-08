@@ -22,8 +22,18 @@ toggler.addEventListener('click', ()=>{
 const grade = document.querySelector('#grade');
 
 
-function correctionFeedback(obj){
+
+
+const submitBtn = document.querySelector('#submit-quiz');
+
+// Grading button that prints the feedback
+submitBtn.addEventListener('click',(event)=>{
+    event.preventDefault();
+
     let score = 0;
+    const totalScore = 22;
+
+    function correctionFeedback(obj){
     if(obj.value === '0'){
             obj.parentElement.style.backgroundColor ='green';
             obj.parentElement.style.color ='white';
@@ -45,15 +55,6 @@ function correctionFeedback(obj){
         }
 }
 
-
-const submitBtn = document.querySelector('#submit-quiz');
-
-// Grading button that prints the feedback
-submitBtn.addEventListener('click',(event)=>{
-    event.preventDefault();
-
-    // let score = 0;
-    const totalScore = 22;
 
     // Correcting each of the checked elements and showing each questions feedback
     document.querySelectorAll('[type=radio]:checked').forEach(rad=>{correctionFeedback(rad);});
