@@ -17,7 +17,7 @@ The requirements were:
 - The quiz must contain 10–15 questions.
 - Users should be able to answer all questions and view their results after completion.
 - Display the number of correct answers. Use color and text to communicate results according to these criteria:
-    - Mess then 50% — Failed (red)
+    - Less then 50% — Failed (red)
     - 50%–75% — Good (yellow/orange)
     - More then 75% — Really well done (green)
 - Questions should include a mix of the following types:
