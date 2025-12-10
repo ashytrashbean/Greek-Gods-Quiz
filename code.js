@@ -17,11 +17,25 @@ toggler.addEventListener('click', ()=>{
     
 })
 
+// Dropdown bookmark
+
+const bookmark = document.getElementById('bookmarks');
+if(bookmark){
+    bookmark.addEventListener('change', function(){
+    const quizId = this.value;
+
+    if(quizId && quizId !== 'Skip to question...'){
+        window.location.hash = quizId;
+
+        this.selectedIndex = 0;
+    }
+});
+}
+
+
 // The quiz objs
 
 const grade = document.querySelector('#grade');
-
-
 
 
 const submitBtn = document.querySelector('#submit-quiz');

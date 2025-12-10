@@ -6,6 +6,13 @@
     line-height: 30px;
 }
 
+#bookmarks{
+    position: sticky;
+    font-size: 17px;
+    top: 10px;
+    left: 20px;
+}
+
 form{
     text-align: center;
     background-color: #D37A29;
@@ -45,6 +52,7 @@ form label{
     background-color: white;
     color: black;
 }
+
 
 
 button:hover, label:hover{
